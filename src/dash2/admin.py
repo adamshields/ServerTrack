@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Team, Server, Project, ProjectManager
+from .models import Team, Server, Project # , ProjectManager
 
 
 class TeamAdmin(admin.ModelAdmin):
@@ -34,11 +34,11 @@ admin.site.register(Project, ProjectAdmin)
 class ProjectTabularInline(admin.TabularInline):
     model = Project
 
-class ProjectManagerAdmin(admin.ModelAdmin):
+# class ProjectManagerAdmin(admin.ModelAdmin):
 
-    class Meta:
-        model = ProjectManager
+#     class Meta:
+#         model = ProjectManager
 
-admin.site.register(ProjectManager, ProjectManagerAdmin)
+# admin.site.register(ProjectManager, ProjectManagerAdmin)
 
 
