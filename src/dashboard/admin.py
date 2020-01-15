@@ -25,5 +25,10 @@ class ProjectAdmin(admin.ModelAdmin):
 @admin.register(ProjectManager)
 class ProjectManagerAdmin(admin.ModelAdmin):
 
+    list_display = ['id', 'name',]
+    list_display_links = ['id', 'name']
+    list_filter = ['id', 'name','team', 'server']
+    # list_editable = ['name','short_name']
+    # search_fields = ['id', 'name']
     class Meta:
         model = ProjectManager
