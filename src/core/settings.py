@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dashboard',
     'project_manager',
-    'dash2'
+    'dash2',
+    'manager',
+    'inventory',
 ]
 
 MIDDLEWARE = [
