@@ -44,8 +44,10 @@ class ProjectManager(models.Model):
     team = models.ManyToManyField(Team, related_name="team_server", verbose_name="Teams that Support the Project", blank=True)
     server = models.ManyToManyField(Server, related_name="project_server", verbose_name="Associated Supported Servers", blank=True)
     
-    # def __str__(self):
-    #     return self.id
+    class Meta:
+        verbose_name = ('Project Manager')
+        verbose_name_plural = ('Project Manager')
+
         
     def __str__(self):
         return str(self.name)
