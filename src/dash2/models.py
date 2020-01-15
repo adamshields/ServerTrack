@@ -38,19 +38,19 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
-class ProjectManager(models.Model):
+# class ProjectManager(models.Model):
     
-    project_name = models.ForeignKey(Project, on_delete=models.CASCADE)
-    project_team_servers = models.ManyToManyField(Team, related_name="team_server", verbose_name="Teams that Support the Project", blank=True)
-    project_servers = models.ManyToManyField(Server, related_name="project_server", verbose_name="Associated Supported Servers", blank=True)
+#     project_name = models.ForeignKey(Project, on_delete=models.CASCADE)
+#     project_team_servers = models.ManyToManyField(Team, related_name="team_server", verbose_name="Teams that Support the Project", blank=True)
+#     project_servers = models.ManyToManyField(Server, related_name="project_server", verbose_name="Associated Supported Servers", blank=True)
     
-    # def __str__(self):
-    #     return self.id
+#     # def __str__(self):
+#     #     return self.id
         
-    def __str__(self):
-        return str(self.project_name)
+#     def __str__(self):
+#         return str(self.project_name)
         
-    def get_absolute_url(self):
-		#url(r'^book/(?P<id>\d+)$', BookDetail.as_view(), name='book_detail'),
-		#return reverse("book_detail", kwargs={"id": self.id})
-        return reverse("projectmanager_detail", kwargs={"slug": self.slug})
+#     def get_absolute_url(self):
+# 		#url(r'^book/(?P<id>\d+)$', BookDetail.as_view(), name='book_detail'),
+# 		#return reverse("book_detail", kwargs={"id": self.id})
+#         return reverse("projectmanager_detail", kwargs={"slug": self.slug})
